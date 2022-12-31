@@ -1,0 +1,91 @@
+.Login
+{
+    /* text-align: center; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:
+    linear-gradient(to bottom, rgba(161, 196, 253,0.45),rgba(194, 233, 251,0.15) ),
+    url("ibgimage.jpg");
+
+    /* rgb(161, 196, 253) */
+    /*  rgb(194, 233, 251) */
+    /* background-image: url("ibgimage.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: linear-gradient(120deg, rgb(161, 196, 253) 0%, rgb(194, 233, 251) 100%); */
+    /* background-color: #8BC6EC; */
+    /* background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+    padding: 4vh;
+    padding-left: 6vw;
+    padding-right:6vw;
+
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+.navlink
+{
+    
+    /* font-size: larger; */
+/* color:rgb(202, 202, 234); */
+    color:black;
+  text-decoration: none;
+  /* background-color: #abd7e7f9; */
+
+  /* background-color:rgb(194, 207, 218); */
+  /* background-color: #85FFBD; */
+  /* background-image: linear-gradient(145deg, #85FFBD 20%, #FFFB7D 100%); */
+  /* background-color: #85FFBD; */
+  /* text-align: end; */
+  /* align-self: flex-end; */
+  padding: 0.4rem;
+  /* margin: 1rem; */
+  border-radius: 1ch;
+  /* text-align: right; */
+}
+.submit
+{
+  border: none;
+  /* color:white; */
+  padding: 0.5rem;
+  /* margin:2vh; */
+  margin-top: 1vh;
+  font-size:medium;
+  /* background-color: none; */
+  background-color: rgb(138, 165, 194,0.5);
+  align-self: flex-end;
+}
+.navlink:hover
+{
+  opacity: 0.6;
+}
+.Login .userinput
+{
+    padding: 10px;
+}
+.loginlogo
+{
+    /* align-self:flex-start ; */
+    position: absolute;
+    left:0;
+    /* right:6vw; */
+    top:0;
+    padding: 4vh;
+    padding-left: 9vw;
+    padding-right:9vw;
+    /* font-family: ; */
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    font-size:8vh;
+    color: aliceblue;   
+    margin: 0;
+    /* right:0; */
+    /* align-content: flex-start; */
+    /* justify-self: flex-start; */
+    /* justify-content: flex-start; */
+}
