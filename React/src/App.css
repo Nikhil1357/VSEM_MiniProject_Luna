@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;600&family=Montserrat:ital,wght@0,400;1,300;1,400;1,500&family=PT+Sans&family=Poppins:wght@100;300;400;500&display=swap'); 
+body
+{
+
+
+  /* background-color:aliceblue; */
+  
+    /* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
+  /* background-color:rgb(255,99,71); */
+  /* font-family: 'Trebuchet MS', sans-serif;
+   */
+  
+  /* font-family: 'Lexend Deca', sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */
+font-family: 'Poppins', sans-serif;
+/* font-family: 'PT Sans', sans-serif; */
+  /* background-color: aqua; */
+  /* text-align: center; */
+  
+  /* padding: 6px; */
+  /* color: pink; */
+
+
+}
+/* .navlink:hover {
+
+  background-color:rgb(194, 207, 218);
+  background-color: #85FFBD;
+  background-image: linear-gradient(0, #85FFBD 0%, #FFFB7D 100%);
+  
+  transition: 1s;
+
+} */
+
+h1
+{
+  
+  margin-top: 0;
+  font-weight: 300;
+
+}
+.entrance
+{
+  
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    /* background-color:rgb(194, 207, 218); */
+    /* background-color: #85FFBD; */
+    /* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
+}
+.entrance label
+{
+  font-size: large;
+  /* padding: 1vh; */
+}
+.entrance input 
+{
+  border-radius: 1vh;
+  padding: 0.8vh;
+}
+.neuron
+{
+
+  /* background-color: #FFFB7D; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+  /* flex-wrap: wrap; */
+  /* display: flex; */
+  /* display: inline-block; */
+
+}
+.neuron img
+{
+
+  /* width: auto; */
+  /* height: 10; */
+  /* height: 100px; */
+
+}
+p
+{
+
+  font-size: 120%;
+}
+
