@@ -11,6 +11,8 @@ import Hows from './Hows';
 import Hows1 from './Hows1';
 import Pages from './Pages';
 import Sad from './Sad';
+import Bot from './Bot';
+
 
 function App() {
 
@@ -28,9 +30,9 @@ function App() {
         <Route path="new" element = {<NewUser/>}/>
         <Route path="page" element = {<Pages/>}/>
         <Route path="sad" element = {<Sad/>}/>
+        <Route path='hows1/bot' element = {<Bot/>}/>
       </Routes>
     </BrowserRouter>
-      {/* <Journal/> */}
     
 </>
   //     <div>

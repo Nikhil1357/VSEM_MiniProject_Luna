@@ -23,6 +23,14 @@ function OldOnes() {
   {
     text = "you haven't been well lately, please take care 😔";
   }
+  else if(mood === "angry")
+  {
+    text = "you haven't been well lately, please take care 😔, calm down";
+  }
+  else if(mood === "fear")
+  {
+    text = "you haven't been well lately, please take care 😔, be brave";
+  }
 
 
   useEffect(() => {
@@ -68,7 +76,7 @@ function OldOnes() {
   <div className='oldjournalback'>
     <h1>{loggedin}'s Journals</h1>
     <h3>{text}</h3>
-    {mood==="sad"?
+    {mood==="sad" || mood==="fear" || mood==="surprise" || mood==="angry"?
     <Link 
     
     state={

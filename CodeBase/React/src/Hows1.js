@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useCallback,useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Login from './Login';
-
+import { useNavigate } from 'react-router-dom';
 const names = [
     'Sad ..',
     'Happy ..',
@@ -16,6 +16,7 @@ const names = [
   ]
 function Hows1() {
 
+    const navi = useNavigate()
 
     const [newName, setnewName] = useState("");
 
@@ -60,6 +61,13 @@ if(text.toLocaleLowerCase()==="surprise".toLocaleLowerCase())
 
 }
   return (
+    <>
+    <h3
+    className='howsbot'
+    onClick={()=>{
+        navi('bot')
+    }}
+    >Want to Seek Help ? here is our personal bot </h3>
     <div
     className='Hows'
     >
@@ -95,6 +103,7 @@ if(text.toLocaleLowerCase()==="surprise".toLocaleLowerCase())
     </Link>
     
     </div>
+    </>
   )
 }
 

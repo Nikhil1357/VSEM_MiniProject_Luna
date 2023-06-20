@@ -1,3 +1,15 @@
+.howsbot{
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.26);
+    margin: 0;
+    padding: 1.2vh;
+}
+.howsbot:hover{
+    text-decoration:underline;
+    text-decoration-color: black;
+    text-decoration-style: solid;
+    cursor: pointer;
+}
 .Hows
 {
     /* background-color: pink; */
@@ -6,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 93vh;
 }
 .Hows p
 {

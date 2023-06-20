@@ -1,0 +1,26 @@
+.Bot{
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.Bot input{
+    padding: 20px;
+    font-size: larger;
+}
+.Bot p{
+    text-align: center;
+}
+.Bot button{
+
+    color:black;
+    background-color:aliceblue;
+    border-radius:10px;
+    /* padding: 2%; */
+    margin: 2%;
+    padding-inline: 2%;
+}
