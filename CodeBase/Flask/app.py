@@ -1,16 +1,39 @@
 from flask import Flask,request,jsonify
 from flask_pymongo import pymongo
+import text2emotion as te
 import db
 import json
 #test to insert data to the data base
 import datetime
+import openai
 
 app = Flask(__name__)
+
+
+
 
 x = datetime.datetime.now()
 
 print(x.year)
 print(x.month)
+
+
+@app.route('/openai',methods=['POST'])
+def openaiapi():
+
+    openai.api_key = "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"
+    openai.api_key = "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"
+
+    input = request.json
+    input = input["input"]
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role":"user","content":input}]
+    )
+    resp ={
+        "response":response.choices[0].message.content
+    }
+    return resp
 
 @app.route("/login",methods=["GET","POST"])
 def log():
@@ -45,6 +68,9 @@ def journals():
     dt = {}
     ch = 0
     cs = 0
+    cf = 0
+    ca = 0
+    csur = 0
     for i in ct:
         if(i['Notes']=='uffp'):
             print(i['Date'])
@@ -52,7 +78,14 @@ def journals():
             ch += 1
         elif(i['Mood'].lower()=="sad"):
             cs += 1
-
+        elif(i['Mood'].lower()=="fear"):
+            cf += 1
+        elif(i['Mood'].lower()=="angry"):
+            ca += 1
+        elif(i['Mood'].lower()=="surprise"):
+            csur += 1
+        
+        
         i['YY']=i['Date'].year
         i['MM']=i['Date'].month
         i['DD']=i['Date'].day
@@ -66,10 +99,16 @@ def journals():
         l.append(ret)
 
     current = {}
-    if(ch>=cs):
+    if(ch>=cs and ch >= cf and ch>= csur and ch>=ca):
         current['Currently'] = "happy"
     elif(cs>ch):
         current['Currently'] = "sad"
+    elif(csur>ch):
+        current['Currently'] = "surprise"
+    elif(ca>ch):
+        current['Currently'] = "angry"
+    elif(cf>ch):
+        current['Currently'] = "fear"
 
     current['Notes'] = "Sad"
     current['YY'] = "Sad"
@@ -123,7 +162,10 @@ def newuser():
 def test():
 
     dict = request.json
-    print(dict)
+    emotion = te.get_emotion(dict['Notes'])
+    Keymax = max(zip(emotion.values(), emotion.keys()))[1]
+    print(Keymax)
+    dict['Mood'] = Keymax
     dict['Date'] = datetime.datetime.now()
     db.db.Journal.insert_one(dict)
     return "success"
